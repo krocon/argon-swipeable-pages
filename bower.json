@@ -1,0 +1,30 @@
+{
+  "name": "argon-swipeable-pages",
+  "description": "argon-swipeable-pages is a polymer web-component and used to show one of several pages",
+  "authors": [
+    "Marc Kronberg"
+  ],
+  "keywords": [
+    "web-component",
+    "polymer",
+    "swipeable"
+  ],
+  "main": "argon-swipeable-pages.html",
+  "license": "http://robdodson.mit-license.org/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.3"
+
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.7"
+  }
+}
