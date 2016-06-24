@@ -6,10 +6,10 @@
   ],
   "keywords": [
     "web-components",
-    "web-component",
     "polymer",
     "swipeable"
   ],
+  "version": "1.0.0",
   "main": "argon-swipeable-pages.html",
   "license": "http://robdodson.mit-license.org/",
   "ignore": [
@@ -26,6 +26,5 @@
     "web-component-tester": "^4.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
     "iron-pages": "PolymerElements/iron-pages#^1.0.7"
-  },
-  "version": "1.0.0"
+  }
 }
