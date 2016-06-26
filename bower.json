@@ -9,7 +9,7 @@
     "polymer",
     "swipeable"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "argon-swipeable-pages.html",
   "license": "http://robdodson.mit-license.org/",
   "ignore": [
