@@ -43,7 +43,7 @@ The following code would render the pages (note the name and the age are bound f
 ```html
 <template is="dom-bind">
   <iron-ajax url="data.json" last-response="{{data}}" auto></iron-ajax>
-  <iron-list items="[[data]]" as="person" index-as="pix">
+  <argon-swipeable-pages items="[[data]]" as="person" index-as="pix">
     <template>
       <div>
         <p>Name: [[person.name]]</p>
