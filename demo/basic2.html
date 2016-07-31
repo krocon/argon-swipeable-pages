@@ -26,24 +26,24 @@
 
 <h1>&lt;argon-param-to-model&gt;</h1>
 
-<dom-module id="argon-param-to-model-demo2">
+<dom-module id="argon-param-to-model-demo3">
 
   <template>
-    <iron-location path="{{path}}" query="{{query}}"></iron-location>
-    <argon-param-to-model paramstring="[[query]]"></argon-param-to-model>
+    <argon-param-to-model></argon-param-to-model>
 
     <div>
       <p>Name: [[name]]</p>
       <p>ID: [[id]]</p>
       <p>Next: [[_next(id)]]</p>
-      <p>Magic: [[magic]]</p>
+      <p>Magic 1: [[magic1]]</p>
+      <p>Magic 2: [[magic2]]</p>
     </div>
   </template>
 
   <script>
     HTMLImports.whenReady(function () {
       Polymer({
-        is: 'argon-param-to-model-demo2',
+        is: 'argon-param-to-model-demo3',
         properties: {
           name: {
             type: 'String'
@@ -51,7 +51,7 @@
           id: {
             type: 'Number'
           },
-          magic: {
+          magic1: {
             type: 'Number'
           }
         },
@@ -63,7 +63,7 @@
   </script>
 </dom-module>
 
-<argon-param-to-model-demo2></argon-param-to-model-demo2>
+<argon-param-to-model-demo3></argon-param-to-model-demo3>
 
 </body>
 </html>

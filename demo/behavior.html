@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-  <title>argon-param-to-model tag demo</title>
+
+  <title>argon-param-to-model Behavior demo</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
@@ -9,8 +10,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
 
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-  <link rel="import" href="../../iron-location/iron-location.html">
-  <link rel="import" href="../argon-param-to-model.html">
+
+  <link rel="import" href="../argon-param-to-model-behavior.html">
 
   <style>
     html, body {
@@ -24,46 +25,51 @@
 </head>
 <body unresolved>
 
-<h1>&lt;argon-param-to-model&gt;</h1>
+<h1>ArgonParamToModelBehavior Demo</h1>
 
-<dom-module id="argon-param-to-model-demo2">
+<dom-module id="argon-param-to-model-demo1">
 
   <template>
-    <iron-location path="{{path}}" query="{{query}}"></iron-location>
-    <argon-param-to-model paramstring="[[query]]"></argon-param-to-model>
+    <h2>Demo</h2>
 
     <div>
       <p>Name: [[name]]</p>
       <p>ID: [[id]]</p>
       <p>Next: [[_next(id)]]</p>
-      <p>Magic: [[magic]]</p>
     </div>
   </template>
 
   <script>
     HTMLImports.whenReady(function () {
       Polymer({
-        is: 'argon-param-to-model-demo2',
+        is: 'argon-param-to-model-demo1',
+        behaviors: [
+          ArgonParamToModelBehavior
+        ],
         properties: {
           name: {
             type: 'String'
           },
           id: {
             type: 'Number'
-          },
-          magic: {
-            type: 'Number'
           }
         },
         _next: function (i) {
           return i + 1;
+        },
+        ready: function () {
+          console.info('ready.');
+        },
+        attached: function () {
+          console.info('attached.');
+          this.queryToModel(null, this);
         }
       });
     });
   </script>
 </dom-module>
 
-<argon-param-to-model-demo2></argon-param-to-model-demo2>
+<argon-param-to-model-demo1></argon-param-to-model-demo1>
 
 </body>
 </html>
